@@ -1,0 +1,93 @@
+section{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: #517cef;
+    overflow: hidden;
+}
+section .spacer {
+    aspect-ratio: 5/1;
+    width: 100%;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: 1000px 100px;
+    background: url('../../public/images/wave.png');
+}
+section .spacer.wave2 {
+    animation: anime2 25s linear infinite;
+    z-index: 200;
+    opacity: .6;
+}
+@keyframes anime2{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+section .spacer.wave3 {
+    animation: anime3 20s linear infinite;
+    z-index: 190;
+    opacity: .7;
+}
+@keyframes anime3{
+    0%{
+        background-position-x: 1000px;
+    }
+    100%{
+        background-position-x: 0;
+    }
+}
+section .spacer.wave4 {
+    animation: anime4 20s linear infinite;
+    z-index: 200;
+    opacity: .4;
+}
+@keyframes anime4{
+    0%{
+        background-position-x: -1000px;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+section .spacer.wave5 {
+    animation: anime5 20s linear infinite;
+    z-index: 200;
+    opacity: .5;
+}
+@keyframes anime5{
+    0%{
+        background-position-x: 2000px;
+    }
+    100%{
+        background-position-x: 0;
+    }
+}
+section .spacer.wave1 {
+    animation: anime 18s linear infinite;
+    z-index: 200;
+    opacity: .3;
+}
+@keyframes anime{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+section .ppp{
+    color: black;
+    position: absolute;
+    z-index: 12000;
+    text-align: center;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,356 @@
+body{
+    position: relative;
+}
+.bodyDiv{
+    height: 100vh;
+    width: 100%;
+    background: url('../../../public/images/layered-waves-haikei.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.mainDiv{
+    height: 30rem;
+    width: 40rem;
+    background: none;
+    background-color: blueviolet;
+    display: grid;
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 15px 15px 20px 10px rgba(0, 0, 0, .5);
+    z-index: 1;
+}
+.LogInSignUp{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 5px;
+    padding: 7px;
+    border-radius: 15px;
+    background-color: blueviolet;
+    border: 2px solid white;
+    z-index: 30;
+}
+.LogInSignUp .LinkStart{
+    text-decoration: none;
+    color: white;
+    background-color: blueviolet;
+    border: none;
+}
+.LogInSignUp .div11, .LogInSignUp .div11Go{
+    position: absolute;
+    top: 14%;
+    left: 3%;
+    height: 20px;
+    width: 57px;
+    background-color: black;
+    opacity: .3;
+    border-radius: 20px;
+}
+.LogInSignUp .div11Go{
+    animation: LinkAnim .25s linear forwards;
+}
+@keyframes LinkAnim{
+    0%{
+        left: 3%;
+        width: 57px;
+    }
+    100%{
+        left: 51%;
+        width: 60px;
+    }
+}
+.LogInSignUp .div11Reverse{
+    position: absolute;
+    top: 14%;
+    left: 51%;
+    height: 20px;
+    width: 60px;
+    background-color: black;
+    opacity: .3;
+    border-radius: 20px;
+    animation: LinkAnim1 .25s linear forwards;
+}
+@keyframes LinkAnim1{
+    0%{
+        left: 51%;
+        width: 60px;
+    }
+    100%{
+        left: 3%;
+        width: 57px;
+    }
+}
+
+.LogInSignUp .linkLogin:hover, .LogInSignUp .linkSignUp:hover{
+    box-shadow: 0px 0px 15px 10px rgba(248, 252, 4, 0.5);
+    background-color: blueviolet;
+    color: rgb(250, 246, 246);
+    border-radius: 5px;
+}
+.mainDiv .whiteBack, .mainDiv .whiteBackAnim {
+    position: absolute;
+    height: 30rem;
+    width: 14rem;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    border-radius: 20px 0 0 20px;
+    z-index: 10;
+    left: 0;
+}
+.mainDiv .whiteBackAnim2 {
+    position: absolute;
+    height: 30rem;
+    width: 14rem;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    border-radius: 0px 20px 20px 0px;
+    z-index: 10;
+    right: 0;
+    animation: loginPage2 1s linear forwards;
+}
+.mainDiv .whiteBackAnim {
+    animation: loginPage 1s linear forwards;
+}
+ @keyframes loginPage {
+    0%{
+        width: 14rem;
+        left: 0;
+    }
+    30%{
+        left: 5.2rem;
+    }
+    50%{
+        width: 17rem;
+    }
+    70%{
+        left: 20.8rem;
+    }
+    100%{
+        left: 26rem;
+        width: 14rem;
+        border-radius: 0px 20px 20px 0px;
+    }
+}
+@keyframes loginPage2 {
+    0%{
+        width: 14rem;
+        right: 0;
+    }
+    30%{
+        right: 5.2rem;
+    }
+    50%{
+        width: 17rem;
+    }
+    70%{
+        right: 20.8rem;
+    }
+    100%{
+        right: 26rem;
+        width: 14rem;
+        border-radius: 20px 0 0 20px;
+    }
+}
+.LoginForm, .LoginFormAnim, .LoginFormAnimReverse {
+    display: grid;
+    position: absolute;
+    width: 20rem;
+    grid-template-rows: 6rem  5rem 5rem 1rem 5rem;
+    justify-items: center;
+    margin: 4rem 0;
+    right: 50px;
+    z-index: 9;
+}
+.SignUpForm, .SignUpFormInitial, .SignUpFormAnim, .SignUpFormAnimReverse{
+    display: grid;
+    position: absolute;
+    width: 20rem;
+    grid-template-rows: 8rem  4rem 4rem 3rem 5rem;
+    justify-items: center;
+    margin: 3rem 0;
+    left: 50px;
+    z-index: 9;
+}
+.SignUpFormInitial{
+    left: -1000%;
+}
+.LoginFormAnim{
+    animation: loginPage1 1s linear forwards;
+}
+.LoginFormAnimReverse{
+    animation: loginPage3 1s linear forwards;
+}
+.SignUpFormAnim{
+    animation: singupPage1 1s linear forwards;
+}
+.SignUpFormAnimReverse{
+    animation: singupPage2 1s linear forwards;
+}
+@keyframes loginPage1 {
+    0%{
+       right: 50px;
+       opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+        right: 270px;
+    }
+}
+@keyframes loginPage3 {
+    0%{
+        opacity: 0;
+        right: 270px;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        right: 50px;
+        opacity: 1;
+    }
+}
+@keyframes singupPage1 {
+    0%{
+       left: 50px;
+       opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity:0;
+        left: 270px;
+    }
+}
+@keyframes singupPage2 {
+    0%{
+        opacity:0;
+        left: 270px;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        left: 50px;
+        opacity: 1;
+    }
+}
+.LoginForm h3, .LoginFormAnim h3, .LoginFormAnimReverse h3, .SignUpForm h3, .SignUpFormAnim h3, .SignUpFormAnimReverse h3{
+    align-self: center;
+    font-size: 23px;
+    color: rgb(255, 255, 255);
+}
+.LoginForm input, .LoginFormAnimReverse input, .LoginFormAnim input, .SignUpForm input, .SignUpFormAnim input, .SignUpFormAnimReverse input{
+    height: 3rem;
+    width: 15rem;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 0;
+}
+.LoginForm .Input1, .LoginFormAnimReverse .Input1, .LoginFormAnim .Input1{
+    align-self: center;
+}
+.LoginForm h4, .LoginFormAni h4, .LoginFormAnimReverse h4, .SignUpForm h4, .SignUpFormAnim h4, .SignUpFormAnimReverse h4{
+    color: rgb(255, 255, 255);
+    align-self: center;
+}
+.LoginForm .LoginButton, .LoginFormAnim .LoginButton, .LoginFormAnimReverse .LoginButton, .SignUpForm .SignUpButton, .SignUpFormAnim .SignUpButton, .SignUpFormAnimReverse .SignUpButton{
+    align-self: center;
+    height: 3rem;
+    width: 7rem;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 0;
+    font-size: 18px;
+    border: solid 2px white;
+    background-color: blueviolet;
+}
+.LoginForm .LoginButton:hover, .LoginFormAnim .LoginButton:hover, .LoginFormAnimReverse .LoginButton:hover, .SignUpForm .SignUpButton:hover, .SignUpFormAnim .SignUpButton:hover, .SignUpFormAnimReverse .SignUpButton:hover {
+    box-shadow: 0px 0px 20px 5px rgba(248, 252, 4);
+    color: white;
+}
+.LoginWelcome, .LoginWelcomeGo, .LoginWelcomeGoReverse{
+    position: absolute;
+    display: grid;
+    justify-items: center;
+    width: 11rem;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    grid-template-rows: 2fr 1fr 2fr;
+    text-align: center;
+    z-index: 11;
+}
+.SignUpWelcome, .SignUpWelcomeGo, .SignUpWelcomeGoReverse{
+    position: absolute;
+    z-index: 11;
+    display: grid;
+    justify-items: center;
+    width: 11rem;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    grid-template-rows: 2fr 1fr 2fr;
+    text-align: center;
+    opacity: 0;
+}
+.LoginWelcomeGo{
+    animation: LoginWelcomeGo .25s linear forwards;
+}
+.LoginWelcomeGoReverse{
+    animation: LoginWelcomeGoReverse 1s linear forwards;
+}
+.SignUpWelcomeGo{
+    animation: SignUpWelcomeGo 1s linear forwards;
+}
+.SignUpWelcomeGoReverse{
+    animation: SignUpWelcomeGoReverse 0.25s linear forwards;
+}
+@keyframes LoginWelcomeGo {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes LoginWelcomeGoReverse {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes SignUpWelcomeGo {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes SignUpWelcomeGoReverse {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.LoginWelcome h3,h5,p, .LoginWelcomeGo h3,p,h5, .LoginWelcomeGoReverse h3,p,h5, .SignUpWelcome h3,p,h5, .SignUpWelcomeGoReverse h3,p,h5, .SignUpWelcomeGo h3,p,h5{
+    align-self: center;
+    justify-self: center;
+}
